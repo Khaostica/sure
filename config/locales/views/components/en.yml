@@ -87,6 +87,8 @@ en:
     pill:
       aria_label: "%{label}"
       default_label: Preview
+    progress_ring:
+      default_aria_label: "%{percent}% complete"
     dialog:
       close: Close
     popover:

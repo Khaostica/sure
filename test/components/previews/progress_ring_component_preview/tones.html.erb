@@ -1,0 +1,6 @@
+<div class="flex items-center gap-6">
+  <%= render DS::ProgressRing.new(percent: 25, tone: :neutral, show_percent: true, label: "Neutral 25%") %>
+  <%= render DS::ProgressRing.new(percent: 50, tone: :success, show_percent: true, label: "Success 50%") %>
+  <%= render DS::ProgressRing.new(percent: 75, tone: :warning, show_percent: true, label: "Warning 75%") %>
+  <%= render DS::ProgressRing.new(percent: 90, tone: :destructive, show_percent: true, label: "Destructive 90%") %>
+</div>

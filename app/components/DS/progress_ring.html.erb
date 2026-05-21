@@ -1,0 +1,37 @@
+<svg
+  width="<%= size %>"
+  height="<%= size %>"
+  viewBox="0 0 <%= size %> <%= size %>"
+  role="progressbar"
+  aria-valuenow="<%= percent %>"
+  aria-valuemin="0"
+  aria-valuemax="100"
+  aria-label="<%= aria_label %>"
+  class="shrink-0">
+  <circle
+    class="fill-transparent"
+    style="stroke: <%= track_color %>;"
+    r="<%= radius %>"
+    cx="<%= center %>"
+    cy="<%= center %>"
+    stroke-width="<%= stroke_width %>"></circle>
+  <circle
+    class="fill-transparent"
+    style="stroke: <%= stroke_color %>;"
+    r="<%= radius %>"
+    cx="<%= center %>"
+    cy="<%= center %>"
+    stroke-width="<%= stroke_width %>"
+    stroke-dasharray="<%= circumference %>"
+    stroke-dashoffset="<%= stroke_dashoffset %>"
+    stroke-linecap="round"
+    transform="rotate(-90, <%= center %>, <%= center %>)"></circle>
+  <% if show_percent %>
+    <text
+      x="<%= center %>"
+      y="<%= center %>"
+      text-anchor="middle"
+      dominant-baseline="central"
+      class="<%= percent_text_class %> font-medium <%= percent_text_size_class %>"><%= percent %>%</text>
+  <% end %>
+</svg>
